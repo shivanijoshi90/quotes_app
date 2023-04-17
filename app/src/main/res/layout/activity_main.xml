@@ -12,7 +12,7 @@
         android:id="@+id/rcvList"
         android:layout_width="match_parent"
         tools:listitem="@layout/quotes_item"
-        android:layout_height="match_parent"/>
+        android:layout_height="wrap_content"/>
 
 
 </LinearLayout>

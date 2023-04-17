@@ -28,7 +28,7 @@ import com.shivani.quotes_app.Click.ImageClick;
 public class quatos_activity extends AppCompatActivity {
     int imgArray[] = {img_4, img_5,img_6,img_7,img_8,img_9,img_10,img_11,img_12,img_13,img_14,img_15,img_16};
 
-    private static final String TAG = "QuotesActivity";
+
   RecyclerView imgList;
     TextView txtQuote;
     ImageView Image;
@@ -42,6 +42,7 @@ public class quatos_activity extends AppCompatActivity {
         imgList = findViewById(R.id.imgList);
         Image = findViewById(R.id.Image);
 
+
         String quote = getIntent().getStringExtra("quote");
         txtQuote.setText(quote);
 
@@ -52,8 +53,7 @@ public class quatos_activity extends AppCompatActivity {
 
             }
         };
-        RecyclerView.LayoutManager manager = new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false);
-        ImgListAdapter adapter = new ImgListAdapter(imgArray,click);
+        RecyclerView.LayoutManager manager = new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false);        ImgListAdapter adapter = new ImgListAdapter(imgArray,click);
         imgList.setLayoutManager(manager);
         imgList.setAdapter(adapter);
     }

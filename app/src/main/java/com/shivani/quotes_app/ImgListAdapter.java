@@ -44,6 +44,7 @@ public class ImgListAdapter extends RecyclerView.Adapter<ImgListAdapter.ImageLis
 
     @Override
     public int getItemCount() {
+
         return imgArray.length;
     }
 

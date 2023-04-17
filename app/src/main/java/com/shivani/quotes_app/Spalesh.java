@@ -1,10 +1,10 @@
 package com.shivani.quotes_app;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class Spalesh extends AppCompatActivity {
     Handler handler;
@@ -19,9 +19,9 @@ public class Spalesh extends AppCompatActivity {
             public void run() {
                 Intent intent=new Intent(Spalesh.this,MainActivity.class);
                 startActivity(intent);
-                finish();
+
             }
-        }, 1000);
+        }, 2000);
 
 
 
