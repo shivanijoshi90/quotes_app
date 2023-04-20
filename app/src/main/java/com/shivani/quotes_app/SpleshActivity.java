@@ -6,24 +6,20 @@ import android.os.Handler;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Spalesh extends AppCompatActivity {
-    Handler handler;
+public class SpleshActivity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_spalesh);
-        handler = new Handler();
-        handler.postDelayed(new Runnable() {
+        new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent=new Intent(Spalesh.this,MainActivity.class);
-                startActivity(intent);
-
+                startActivity(new Intent(SpleshActivity.this, MainActivity.class));
+                finish();
             }
         }, 2000);
-
-
 
     }
 }

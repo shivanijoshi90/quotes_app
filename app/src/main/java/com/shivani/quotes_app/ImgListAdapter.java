@@ -25,6 +25,7 @@ public class ImgListAdapter extends RecyclerView.Adapter<ImgListAdapter.ImageLis
     @NonNull
     @Override
     public ImageListHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        context = parent.getContext();
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.img_item,parent,false);
         return new ImageListHolder(view);
     }
@@ -36,6 +37,7 @@ public class ImgListAdapter extends RecyclerView.Adapter<ImgListAdapter.ImageLis
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 click.getImage(position);
             }
         });

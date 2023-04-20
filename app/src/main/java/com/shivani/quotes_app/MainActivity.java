@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
             }
         };
 
-        RecyclerView.LayoutManager manager = new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL);
+        RecyclerView.LayoutManager manager = new StaggeredGridLayoutManager(1,StaggeredGridLayoutManager.VERTICAL);
         QuotesAdapter adapter = new QuotesAdapter(utils.quotes,click);
         rcvList.setLayoutManager(manager);
         rcvList.setAdapter(adapter);

@@ -46,14 +46,9 @@ public class quatos_activity extends AppCompatActivity {
         String quote = getIntent().getStringExtra("quote");
         txtQuote.setText(quote);
 
-        ImageClick click = new ImageClick() {
-            @Override
-            public void getImage(int pos) {
-                Glide.with(quatos_activity.this).load(imgArray[pos]).into(Image);
-
-            }
-        };
-        RecyclerView.LayoutManager manager = new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false);        ImgListAdapter adapter = new ImgListAdapter(imgArray,click);
+        ImageClick click = pos -> Glide.with(quatos_activity.this).load(imgArray[pos]).into(Image);
+        RecyclerView.LayoutManager manager = new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false);
+        ImgListAdapter adapter = new ImgListAdapter(imgArray,click);
         imgList.setLayoutManager(manager);
         imgList.setAdapter(adapter);
     }
